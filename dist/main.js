@@ -1,0 +1,1 @@
+(()=>{"use strict";var o={n:e=>{var r=e&&e.__esModule?()=>e.default:()=>e;return o.d(r,{a:r}),r},d:(e,r)=>{for(var n in r)o.o(r,n)&&!o.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:r[n]})},o:(o,e)=>Object.prototype.hasOwnProperty.call(o,e)};const e=jQuery;var r=o.n(e);const n=_;var t=o.n(n);console.log(5),console.log(t()),r()((function(){console.log(12345)}))})();
