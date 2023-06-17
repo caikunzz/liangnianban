@@ -5,11 +5,11 @@ const path = require('path');
 
 module.exports = {
     stats:'minimal',
-    output:{
-        filename:"main[contenthash:5].js",
-        path:path.resolve(__dirname,'dist'),
-        clean:true,
-    },
+    // output:{
+    //     filename:"main[contenthash:5].js",
+    //     path:path.resolve(__dirname,'dist'),
+    //     clean:true,
+    // },
     mode:process.env.NODE_ENV,
     plugins:[
         new HtmlWebpackPlugin({
