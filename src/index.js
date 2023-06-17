@@ -10,16 +10,16 @@ jQuery(function(){
 })
 
 
-jQuery.ajax({
-    url:'http://127.0.0.1:3000/api/abc',
-    success(data){
-        console.log(data);
-    }
-})
+// jQuery.ajax({
+//     url:'http://127.0.0.1:3000/api/abc',
+//     success(data){
+//         console.log(data);
+//     }
+// })
 
-jQuery.ajax({
-    url:'http://127.0.0.1:3000/api1/abc1',
-    success(data){
-        console.log(data);
-    }
-})
+// jQuery.ajax({
+//     url:'http://127.0.0.1:3000/api1/abc1',
+//     success(data){
+//         console.log(data);
+//     }
+// })
