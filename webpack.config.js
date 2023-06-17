@@ -6,16 +6,17 @@ const path = require('path');
 module.exports = {
     stats:'minimal',
     output:{
-        filename:'main.js',
+        filename:"main[contenthash:5].js",
         path:path.resolve(__dirname,'dist'),
-        clean: true,
+        clean:true,
     },
     mode:process.env.NODE_ENV,
     plugins:[
         new HtmlWebpackPlugin({
             template:'./public/index.html',
             inject:"head",
-            script:['https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.core.js','https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js']
+            script:['https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.core.js','https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js'],
+            
         }),
         new MiniCssWebpackPlugin({
             filename:'[contenthash:8].css'
@@ -27,7 +28,7 @@ module.exports = {
         })
     ],
     devServer:{
-        static:'./dist',
+        static:path.resolve(__dirname,'dist'),
         open:true,
         proxy:{
             '^/api':{
@@ -55,7 +56,21 @@ module.exports = {
             {
                 test:/\.css$/,
                 use:[MiniCssWebpackPlugin.loader,'css-loader',"postcss-loader"]
-            }
+            },
+                {
+                    test:/\.mp3$/,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'audio/[name][ext]'
+                    }
+                },
+                {
+                    test:/\.png$/,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'imgs/[name][ext]'
+                    }
+                },
         ]
     }
 }
