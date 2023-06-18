@@ -61,14 +61,14 @@ module.exports = {
                     test:/\.mp3$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'audio/[name][ext]'
+                        filename: '[name][ext]'
                     }
                 },
                 {
                     test:/\.png$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'imgs/[name][ext]'
+                        filename: '[name][ext]'
                     }
                 },
         ]
